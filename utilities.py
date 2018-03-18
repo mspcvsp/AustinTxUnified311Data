@@ -63,7 +63,16 @@ def load_authenication(data_path):
 
 def parse_int(key,
               formatted_record):
+    """Parses an integer value
 
+    Args:
+        key: String that stores the key for an integer value
+
+        formatted_record: OrderedDict that stores an Austin Tx 311
+                          Unified data record
+
+    Returns:
+        None - Dictionary is updated in place"""
     if formatted_record[key] == '':
         formatted_record[key] = None
     else:
@@ -74,7 +83,16 @@ def parse_int(key,
         
 def parse_float(key,
               formatted_record):
+    """Parses an floating point value
 
+    Args:
+        key: String that stores the key for an floating point value
+
+        formatted_record: OrderedDict that stores an Austin Tx 311
+                          Unified data record
+
+    Returns:
+        None - Dictionary is updated in place"""
     if formatted_record[key] == '':
         formatted_record[key] = None
     else:
